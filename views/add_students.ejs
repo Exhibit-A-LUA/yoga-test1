@@ -1,0 +1,113 @@
+<%- include('layout/header'); %>
+
+<div class="container">
+  <div class="row">
+      <div class="col-lg-6 mx-auto mt-4">
+          <div class="card shadow">
+              <div class="card-header bg-primary">
+                  <h3 class="text-light">Add New Student</h3>
+              </div>
+              <div class="card-body p-4">
+                  <form action="/add" method="post" id="add-form" enctype="multipart/form-data">
+                      <div class="mb-3">
+                          <label for="num">Number</label>
+                          <input type="number" name="num" class="form-control form-control-lg" placeholder="Enter Number" required/>
+                      </div>
+                      <div class="mb-3">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" class="form-control form-control-lg" placeholder="Enter Name" required/>
+                      </div>
+                      <div class="mb-3">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" class="form-control form-control-lg" placeholder="Enter Email" required/>
+                      </div>
+                      <div class="mb-3">
+                        <label for="sType">Choose Student Type</label>
+                        <select id="sType" name="sType" class="form-control form-control-lg" placeholder="Enter sType" required>
+                          <option value="yoga" selected>Yoga</option>
+                          <option value="work">Work</option>
+                          <option value="charity">Charity</option>
+                          <option value="course">Course</option>
+                          <option value="court">Court</option>
+                          <option value="doctor">Doctor</option>
+                          <option value="holiday">Holiday</option>
+                          <option value="kids">Kids</option>
+                          <option value="sick">Charity</option>
+                        </select>
+                      </div>
+                      <div class="mb-3">
+                          <label for="phone">Phone</label>
+                          <input type="tel" name="phone" class="form-control form-control-lg" placeholder="Enter Phone" required/>
+                      </div>
+                      <div class="mb-3">
+                        <label for="package">Package</label>
+                        <select id="package" name="package" class="form-control form-control-lg" placeholder="Choose Package" required>
+                          <option value="1">one off</option>
+                          <option value="8">8 per month</option>
+                          <option value="12" selected>12 per month</option>
+                          <option value="16">16 per month</option>
+                          <option value="20">20 per month</option>
+                        </select>
+                      </div>
+                      <div class="mb-3">
+                        <label for="wk">Days of Week</label>
+                        <div>
+                          <input type="checkbox" id="mon" name="mon" value="1">
+                          <label for="mon"> Monday</label><br>
+                          <input type="checkbox" id="tue" name="tue" value="2">
+                          <label for="tue"> Tuesday</label><br>
+                          <input type="checkbox" id="wed" name="wed" value="3">
+                          <label for="wed"> Wednesday</label><br>
+                          <input type="checkbox" id="thu" name="thu" value="4">
+                          <label for="thu"> Thursday</label><br>
+                          <input type="checkbox" id="fri" name="fri" value="5">
+                          <label for="fri"> Friday</label><br>
+                          <input type="checkbox" id="sat" name="sat" value="5">
+                          <label for="sat"> Saturday</label><br>
+                          <input type="checkbox" id="sun" name="sun" value="5">
+                          <label for="sun"> Sunday</label><br>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <label for="colour">Student Colour</label>
+                        <input type="number" name="colour" class="form-control form-control-lg" placeholder="Enter Colour Number" required/>
+                      </div>
+                      <div class="mb-3">
+                        <label for="startDate">Start Date</label>
+                        <input type="date" id="startDate" name="startDate" class="form-control form-control-lg" placeholder="Enter Start Date" required/>
+                      </div>
+                      <!-- <div class="mb-3">
+                        <label for="startYr">Start Year</label>
+                        <input type="number" name="startYr" class="form-control form-control-lg" placeholder="Enter Start Year" required/>
+                      </div>
+                      <div class="mb-3">
+                        <label for="startMth">Start Month</label>
+                        <input type="number" name="startMth" class="form-control form-control-lg" placeholder="Enter Start Month" required/>
+                      </div>
+                      <div class="mb-3">
+                        <label for="startDay">Start Day</label>
+                        <input type="number" name="startDay" class="form-control form-control-lg" placeholder="Enter Start Day" required/>
+                      </div> -->
+                      <div class="mb-3">
+                        <label for="birthday">Birthday Notes</label>
+                        <input type="text" name="birthday" class="form-control form-control-lg" placeholder="Enter Birthday Notes" required/>
+                      </div>
+                      <div class="mb-3">
+                        <label for="classesNishCancelled">Classes Nish Cancelled</label>
+                        <input type="number" name="classesNishCancelled" class="form-control form-control-lg" placeholder="Enter number of classes Nish cancelled" value="0" required/>
+                      </div>
+                      <div class="mb-3">
+                          <label for="studentImageFileName" class="form-label">Select Image</label>
+                          <input type="file" name="studentImageFileName" class="form-control form-control-lg" required/>
+                      </div>
+                      <div class="mb-3">
+                          <input type="submit" name="submit" value="Add Student" class="btn btn-primary btn-lg" />
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<%- include('layout/footer'); %>
